@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.jboss.org/dtd/hibernate/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>        
+		<mapping class="com.fwd.model.passion.Activity"></mapping>
+		<mapping class="com.fwd.model.passion.Content"></mapping>
+		<mapping class="com.fwd.model.passion.Gift"></mapping>
+		<mapping class="com.fwd.model.passion.History"></mapping>
+		<mapping class="com.fwd.model.passion.Member"></mapping>
+		<mapping class="com.fwd.model.passion.News"></mapping>
+		<mapping class="com.fwd.model.passion.TPassion"></mapping>
+		<mapping class="com.fwd.model.passion.TPoint"></mapping>
+		<mapping class="com.fwd.model.passion.TrBalance"></mapping>
+		<mapping class="com.fwd.model.passion.TrPoint"></mapping>      
+		<mapping class="com.fwd.model.passion.TrRedeem"></mapping>
+		<mapping class="com.fwd.model.passion.Users"></mapping>
+	</session-factory>
+</hibernate-configuration>

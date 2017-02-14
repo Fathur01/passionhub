@@ -1,0 +1,86 @@
+
+<section class="content">
+   <div class="background">
+        <form name="regForm" ng-submit="validate()"><center>
+            <div class="panel panel-body" style="width:800px;"><center>
+            <table width=500><tr><td>
+				<h1>{{ 'Register_validate_User_Registration' | translate }}</h1>
+				<span style="color:red">{{ errMsg }}</span>
+				 <hr class="separator-line" />
+                    <div class="form-group text-left ">
+                        <label for="policyNo">{{ 'Register_validate_Policy_Number' | translate }}</label> * <br/> 
+                        <input ng-model="request.policyNo" name="policyNo" type="text" class="form-control-v1" size="40" required>
+                        <span style="color:red" ng-show="regForm.policyNo.$dirty && regForm.policyNo.$invalid">
+							<span ng-show="regForm.policyNo.$error.required">Policy No. is required.</span>
+						</span>
+                    </div>
+                    
+                    <div class="form-group text-left">
+                        <label for="dateOfBirth">{{ 'Date_of_Birth(DD/MM/YYYY)' | translate }} </label> * 
+                        <!--  <input ng-model="request.dateOfBirth" type="text" class="form-control-v1" size="40" > -->
+                        
+                    </div>
+                    
+                   	<!-- date picker -->
+					<div class="form-group"> 
+						<input type="text" class="datepicker-default" name="dob" id="dateOfBirth" ng-model="request.dateOfBirth" 
+							   datepicker-popup="{{datePicker.format}}" maxlength="10"  
+							   placeholder="" datepicker-options="datePicker.options" 
+							   is-open="datePicker.instances['dob']" close-text="Close" required />						   
+						<button type="button" class="" ng-click="datePicker.open($event, 'dob')">
+						<i class="glyphicon glyphicon-calendar"></i>
+						</button>
+						
+						<span style="color:red" ng-show="regForm.dob.$dirty && regForm.dob.$invalid">
+							<span ng-show="regForm.dob.$error.required">Date of Birth is required.</span>
+						</span>
+					</div>
+                	<!-- date picker -->
+                    
+                    
+                    <div class="form-group text-left">
+                        <label for="membername">{{ 'Register_Card_No' | translate }}</label> * <br/>
+                        <input ng-model="request.cardNo" name="cardNo" type="text" class="form-control-v1" size="40" required>
+                        <span style="color:red" ng-show="regForm.cardNo.$dirty && regForm.cardNo.$invalid">
+							<span ng-show="regForm.cardNo.$error.required">Card No. is required.</span>
+						</span>
+                    </div>
+                    
+                  
+                     
+                    <div class="form-group text-left">
+                    <label for="membername">{{ 'Email' | translate }}</label> * <br/>
+					<input type="email" name="email" ng-model="request.email" class="form-control-v1" size="40" required>
+						<span style="color:red" ng-show="regForm.email.$dirty && regForm.email.$invalid">
+							<span ng-show="regForm.email.$error.required">Email address is required.</span>
+							<span ng-show="regForm.email.$error.email">Invalid email address.</span>
+						</span>
+					</div>
+					                    
+                    <!-- 
+                    <div class="form-group text-left">
+                        <label for="membername">Email</label><br/>
+                        <input ng-model="request.email" type="text" class="form-control-v1" size="40"  >
+                    </div>
+                     -->
+                    
+                    <div class="form-group text-left">
+                        <label for="membername">{{ 'Register_Phone_No' | translate }}</label> * <br/>
+                        <input ng-model="request.phoneNo" type="text" class="form-control-v1" size="40" name="phoneNo" required>
+                        
+                        <span style="color:red" ng-show="regForm.phoneNo.$dirty && regForm.phoneNo.$invalid">
+							<span ng-show="regForm.phoneNo.$error.required">Phone No. is required.</span>
+						</span>
+                        
+                    </div>
+                    
+				 	<div class="text-center mar-40 mar-l mar-r">
+                      <button type="button" class="btn btn-primary" onclick="history.go(-1);">{{ 'Register_validate_CANCEL' | translate }}</button>
+				      <button type="submit" class="btn btn-primary">{{ 'Register_validate_NEXT' | translate }}</button>
+                 	</div>        
+            </td></tr></table>             
+            </div>
+           
+        </form>
+   </div>
+</section>

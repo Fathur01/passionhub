@@ -1,0 +1,49 @@
+
+<section class="content">
+   <div class="background">
+        <form name="regForm" ng-submit="register()" method="POST"><center>
+            <div class="panel panel-body" style="width:800px;"><center>
+            <table width=500><tr><td>
+				<h1>{{ 'Register_Label_Title_Register' | translate }}</h1>
+				 <hr class="separator-line" />
+                    <div class="form-group text-left ">
+                        <label for="membernumber">{{ 'Register_Label_TH_Username' | translate }}</label><br/>
+                        <input ng-model="request.userName" type="text" class="form-control-v1" size="40" 
+                        name="userName" required>
+                                                                                            
+                        <span style="color:red" ng-show="regForm.userName.$dirty && regForm.userName.$invalid">
+							<span ng-show="regForm.userName.$error.required">{{ 'Register_Error_Required_Username' | translate }}</span>
+						</span>	                        
+                    </div>
+                    <div class="form-group text-left">
+                        <label for="membername">{{ 'Register_Label_TH_Password' | translate }}</label><br/>
+                        <input ng-model="request.password" type="password" class="form-control-v1" size="40" 
+                        name="pwd" ng-pattern='/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])/' ng-minlength="8" ng-maxlength="20" required autocomplete="off">
+                        
+                        <span style="margin: 0; padding: 2px" class="btn-action single glyphicons circle_question_mark" tooltip-placement="top" tooltip="{{ 'Register_Info_Tooltip_Password' | translate }}"><i></i></span>
+                        
+                        <span style="color:red" ng-show="regForm.pwd.$dirty && regForm.pwd.$invalid">
+							<span ng-show="regForm.pwd.$error.required">{{ 'Register_Error_Required_Password' | translate }}</span>
+ 							<span ng-show="!regForm.pwd.$error.required && (regForm.pwd.$error.minlength || regForm.pwd.$error.maxlength) && regForm.pwd.$dirty">{{ 'Register_Error_Length_Password' | translate }}</span>
+ 							<span ng-show="!regForm.pwd.$error.required && !regForm.pwd.$error.minlength && !regForm.pwd.$error.maxlength && regForm.pwd.$error.pattern && regForm.pwd.$dirty">{{ 'Register_Error_Pattern_Password' | translate }}</span>
+<!--    							one non-alpha character (a number or a symbol.) -->   
+						</span>                        
+                    </div>
+                    <div class="form-group text-left">
+                        <label for="membername">{{ 'Register_Label_TH_Confirm_Password' | translate }}</label><br/>
+                        <input ng-model="confirmPassword" type="password" class="form-control-v1" size="40" 
+                        name="confirmPwd" required autocomplete="off"> 
+                        <span style="color:red" ng-show="regForm.confirmPwd.$dirty && regForm.confirmPwd.$invalid">
+                        	<span ng-show="regForm.confirmPwd.$error.required">{{ 'Register_Error_Required_Confirm_Password' | translate }}</span>
+                        </span>                    
+                    </div>
+				 <div class="text-center mar-40 mar-l mar-r">
+                      <button type="button" class="btn btn-primary" ng-click="go('/home')">{{ 'Home' | translate }}</button>
+				      <button type="submit" class="btn btn-primary" ng-disabled="!regForm.$valid">{{ 'Register_Label_Button_Register' | translate }}</button>
+                 </div>     
+            </td></tr></table>          
+            </div>
+           
+        </form>
+   </div>
+</section>

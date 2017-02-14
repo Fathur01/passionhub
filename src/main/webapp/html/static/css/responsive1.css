@@ -1,0 +1,26 @@
+/* ================================================================ */
+/* Copyright: Aris Dwi Sulistiawan                                  */
+/* Tema : fwd v.3                                                   */
+/* ================================================================ */
+
+@media only screen and (min-device-width : 992px) and  (max-width : 1199px) {
+	.navbar-header{ margin:0 auto; width:100%; }
+	#navbar-white .navbar-right{ margin-right:10%; }
+	.navbar-brand{ height:90px; margin-left:30% !important; }
+}
+
+@media only screen and (min-device-width : 768px) and  (max-width : 991px) {
+	.navbar-brand{ height:90px; margin-left:30% !important; }
+}
+
+@media only screen and (min-device-width : 0) and  (max-width : 767px) {
+	.navbar-header{ display:block; }
+	.navbar-wh{ float:left !important; margin-left:10px; position:relative; }
+	a.navbar-brand{ float:left;  margin-left:0 !important }
+	.navbar-bl{ float:right !important; text-align:right }
+	.navbar-brand img{ height:27px; }
+	ul.navbar-white > li, ul.navbar-white > li.policy, ul.navbar-white > li.member,ul.navbar-white > li.claim,ul.navbar-white > li.benefit,ul.navbar-white > li.e-claim,ul.navbar-white > li.menu,ul.navbar-white > li.how,ul.navbar-white > li.hr,ul.navbar-white > li.broker{ width:auto; }
+	ul.navbar-white > li > a.download:hover, ul.navbar-white > .active > a.download:hover, ul.navbar-white > .active > a.download, ul.navbar-white > li	 > a.download{ background-position:right center !important; }
+	ul.navbar-white > li > a{ height:auto; padding:10px 15px; }
+	ul.navbar-white > li { width:105px;  }
+}

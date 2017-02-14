@@ -1,0 +1,24 @@
+
+
+<section class="affinity-home">
+	<div class="container">
+    	<div class="auto-style1">
+        	<br><br><br><br><br> 
+            <p class="sign">{{ 'PassionWelcome' | translate }}</p>
+                 
+			<form ng-submit="login()" method="POST">
+            	<div class="sign">
+                     <center><input type="text" ng-model="request.userName" id="username" class="form-control" style="max-width: 600px;" placeholder="username"></center>
+                </div>
+               	<div class="sign">
+	                <center><input type="password" ng-model="request.password" id="password" class="form-control" placeholder="password" style="max-width: 600px;" autocomplete="off"></center>
+	            </div>
+				<div class="text-center mar-40 mar-l mar-r">
+                	<button type="submit" class="btn btn-primary">{{ 'LoginPassion' | translate }}</button>
+            	</div>
+
+            </form>
+
+    </div>
+</section>
+
